@@ -1,5 +1,8 @@
 <template>
   <test :user="user"/>
+  <p>Main</p>
+  <p>{{ user }}</p>
+  <log :user="user" />
 </template>
 <script scoped>
 export default{

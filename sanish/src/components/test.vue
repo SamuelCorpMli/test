@@ -1,8 +1,8 @@
 <template>
 <h2>Hello there</h2>
-<p>mic test</p>
+<p>Register</p>
 <p>{{ user }}</p>
-<form @submit.prevent="reg" method="post">
+<form @submit.prevent="reg" method="post" id="sUp">
     <input type="text" v-model="Nname" placeholder="Name">
     <input type="password" v-model="Npwd" placeholder="Password">
     <button class="submit">Sign Up</button>
@@ -16,8 +16,8 @@ export default{
     ],
     data(){
         return{
-            Nname:"",
-            Npwd:"",
+            Nname:null,
+            Npwd:null,
         }
     },
     methods:{
@@ -26,7 +26,12 @@ export default{
                 name:this.Nname,
                 pwd:this.Npwd
             }
-            this.user.push(Nuser);
+            if(this.Nname!=null && this.Npwd!=null){
+                this.user.push(Nuser);
+            }
+            this.Nname=null;
+            this.Npwd=null;
+
         }
     }
 }
