@@ -5,7 +5,12 @@
 export default{
     data(){
       return{
-        user:15,
+        user:[
+          {
+            name:"Sanish",
+            pwd:1234
+          }
+        ]
       }
     },
   }
