@@ -29,6 +29,9 @@ export default{
             if(this.Nname!=null && this.Npwd!=null){
                 this.user.push(Nuser);
             }
+            else{
+                alert("Empty Name or Password");
+            }
             this.Nname=null;
             this.Npwd=null;
 

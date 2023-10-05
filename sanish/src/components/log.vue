@@ -28,6 +28,9 @@ export default{
                     }
                 });
             }
+            else{
+                alert("Incorrect Name or Password")
+            }
             this.Lname=null;
             this.Lpwd=null;
 
